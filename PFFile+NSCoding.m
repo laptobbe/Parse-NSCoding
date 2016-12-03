@@ -19,9 +19,11 @@
 {
 	[encoder encodeObject:self.name forKey:kPFFileName];
     [encoder encodeObject:self.url forKey:kPFFileURL];
-	if (self.isDataAvailable) {
+	/*
+    if (self.isDataAvailable) {
 		[encoder encodeObject:[self getData] forKey:kPFFileData];
 	}
+    */
 }
 
 - (id)initWithCoder:(NSCoder*)aDecoder
@@ -32,7 +34,7 @@
 	
 	self = [PFFile fileWithName:name data:data];
 	if (self) {
-        [self setValue:url forKey:@"_url"];
+        [self setValue:url forKey:kPFFileURL];
 	}
 	return self;
 }

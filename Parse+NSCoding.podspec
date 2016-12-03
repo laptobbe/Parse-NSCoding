@@ -6,9 +6,9 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT' }
   s.author       = { "Martin Rybak" => "martin.rybak@gmail.com" }
   s.source       = { :git => "https://github.com/martinrybak/Parse-NSCoding.git", :tag => "0.1.4" }
-  s.platform     = :ios, '6.0'
+  s.platform     = :ios, '8.0'
   s.source_files = '*.{h,m}'
   s.requires_arc = true
-  s.dependency 'Parse-iOS-SDK', '~> 1.2.18'
-  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Parse-iOS-SDK"' }
+  s.dependency 'Parse', '~> 1.13.0'
+  s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '"${PODS_ROOT}/Parse"' }
 end
